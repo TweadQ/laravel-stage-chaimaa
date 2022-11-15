@@ -1,12 +1,16 @@
 <?php
 
+use App\Http\Controllers\VetementController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', [BookController::class, 'index'])->name('home');
 
-Route::get('/', function () {
-    return view('pages.index');
-});
+Route::get('/', [VetementController::class, 'index'])->name('home');
+Route::resource('vetements', VetementController::class);
+
+// Route::get('/', function () {
+//     return view('pages.index');
+// })->name('home');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
