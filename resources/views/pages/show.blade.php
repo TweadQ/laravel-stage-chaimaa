@@ -12,7 +12,7 @@
 				@auth
 						<div class="flex space-x-5 pt-8">
 								<a
-										class="rounded-lg bg-green-600 p-2 text-white"
+										class="rounded-lg bg-green-600 p-3 text-white"
 										href="{{ route('vetements.edit', $vetement->id) }}"
 								>Modifier</a>
 								<x-btn-delete :item="$vetement" routeItem="vetements.destroy"/>

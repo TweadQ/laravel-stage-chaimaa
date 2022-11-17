@@ -14,4 +14,10 @@
             </div>
         </div>
     </div>
+
+    <div class="max-w-7xl mx-auto sm:px-8 lg:px-14">
+        <a href="{{ route('home') }}"><p>Retour Accueil</p></a>
+        <a class="px-3" href="{{ route('create') }}"><p>Ajouter un nouveau vetement</p></a>
+        {{-- <a class="px-3" href="{{ route('update') }}"><p>Modifier un vetement</p></a> --}}
+    </div>
 </x-app-layout>

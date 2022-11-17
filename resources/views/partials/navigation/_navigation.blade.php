@@ -11,9 +11,9 @@
 							<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
 						  </a>
 						  <ul class="p-2 bg-indigo-500">
-							<li><a>Homme</a></li>
-							<li><a>Femme</a></li>
-							<li><a>Enfant</a></li>
+							<li><a href="{{ route('homme')}}">Homme</a></li>
+							<li><a href="{{ route('femme')}}">Femme</a></li>
+							<li><a href="{{ route('enfant')}}">Enfant</a></li>
 						  </ul>
 						</li>
 						<li tabindex="0">
@@ -22,8 +22,8 @@
 							  <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/></svg>
 							</a>
 							<ul class="p-2 bg-indigo-500">
-							  <li><a>Prêt</a></li>
-							  <li><a>Personnalisable</a></li>
+							  <li><a href="{{ route('bijouxPret')}}">Prêt</a></li>
+							  <li><a href="{{ route('bijouxPersonnalisable')}}">Personnalisable</a></li>
 							</ul>
 						</li>
 					</ul>

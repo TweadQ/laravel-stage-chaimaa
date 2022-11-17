@@ -5,6 +5,6 @@
         src="{{ $url_img }}"
     >
     <div class="p-4">
-            <a href="" class="pb-3 text-lg font-black">{{ $title }}</a>
+            <a href="" class="pb-3 text-lg font-black uppercase">{{ $title }}</a>
     </div>
 </div>

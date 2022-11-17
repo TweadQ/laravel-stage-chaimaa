@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Vetement;
+use App\Models\BijouxPret;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class VetementController extends Controller
+class BijouxPretController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,27 +15,14 @@ class VetementController extends Controller
      */
     public function index()
     {
-        $vetements = Vetement::all();
-        return view('pages.index', compact('vetements'));
-
+        $bijouxPrets = BijouxPret::all();
+        return view('pages.index', compact('bijouxPrets'));
     }
 
-    public function Homme()
+    public function bijouxPret()
     {
-        $vetements = Vetement::all();
-        return view('pages.homme', compact('vetements'));
-    }
-
-    public function Femme()
-    {
-        $vetements = Vetement::all();
-        return view('pages.femme', compact('vetements'));
-    }
-
-    public function Enfant()
-    {
-        $vetements = Vetement::all();
-        return view('pages.enfant', compact('vetements'));
+        $bijouxPrets = BijouxPret::all();
+        return view('pages.bijouxPret', compact('bijouxPrets'));
     }
 
     /**
@@ -56,31 +43,26 @@ class VetementController extends Controller
      */
     public function store(Request $request)
     {
-        // dd($request->all());
         // validation form
         $request->validate([
             'url_img' => 'required|max:2000|mimes:png,jpg|image',
             'name' => 'required|max:255',
             'description' => 'required|max:1000',
-            'price' => 'required',
-            'genre' => 'required',
-            'size' => 'required'
+            'price' => 'required'
         ]);
 
         $validateImg = $request->file('url_img')->store('cover');
 
-        Vetement::create([
+        BijouxPret::create([
             'url_img' => $validateImg,
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
-            'genre' => $request->genre,
-            'size' => $request->size,
             'created_at' => now()
         ]);
 
         // redirect
-        return redirect()->route('home')->with('status', 'Vêtement ajouté');
+        return redirect()->route('home')->with('status', 'Bijoux ajouté');
     }
 
     /**
@@ -89,9 +71,9 @@ class VetementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Vetement $vetement)
+    public function show(BijouxPret $bijouxPret)
     {
-        return view('pages.show', compact('vetement'));
+        return view('pages.showBijouxPret', compact('bijouxPret'));
     }
 
     /**
@@ -100,9 +82,9 @@ class VetementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Vetement $vetement)
+    public function edit(BijouxPret $bijouxPret)
     {
-        return view('pages.edit', compact('vetement'));
+        return view('pages.edit', compact('bijouxPret'));
     }
 
     /**
@@ -112,7 +94,7 @@ class VetementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Vetement $vetement)
+    public function update(Request $request, BijouxPret $bijouxPret)
     {
         // validation form
         $request->validate([
@@ -120,31 +102,27 @@ class VetementController extends Controller
             'name' => 'required|max:255',
             'description' => 'required|max:1000',
             'price' => 'required',
-            'genre' => 'required',
-            'size' => 'required'
         ]);
 
         // verify if file exist
         // if file exist delete previous img
         if ($request->hasFile('url_img')) {
             // delete previous image
-            Storage::delete($vetement->url_img);
+            Storage::delete($bijouxPret->url_img);
             // store the new image
-            $vetement->url_img = $request->file('url_img')->store('vetements');
+            $bijouxPret->url_img = $request->file('url_img')->store('bijouxPrets');
         }
 
-        $vetement->update([
-            'url_img' => $vetement->url_img,
+        $bijouxPret->update([
+            'url_img' => $bijouxPret->url_img,
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
-            'genre' => $request->genre,
-            'size' => $request->size,
             'updated_at' => now()
         ]);
 
         return redirect()
-            ->route('vetements.show', $vetement->id)
+            ->route('bijouxPrets.show', $bijouxPret->id)
             ->with('status', 'La produit a bien été modifié!');
     }
 
@@ -154,9 +132,9 @@ class VetementController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Vetement $vetement)
+    public function destroy(BijouxPret $bijouxPret)
     {
-        $vetement->delete();
+        $bijouxPret->delete();
         return redirect()->route('home')->with('status', 'Produit supprimé!');
     }
 }

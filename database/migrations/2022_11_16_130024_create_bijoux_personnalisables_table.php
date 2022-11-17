@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('vetements', function (Blueprint $table) {
+        Schema::create('bijoux_personnalisables', function (Blueprint $table) {
             $table->id();
             $table->string('url_img');
-            $table->string('name')->nullable();
-            $table->string('genre');
+            $table->string('name');
             $table->string('description');
+            $table->string('gravure');
             $table->float('price');
-            $table->string('size')->nullable();
             $table->timestamps();
         });
     }
@@ -32,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('vetements');
+        Schema::dropIfExists('bijoux_personnalisables');
     }
 };
