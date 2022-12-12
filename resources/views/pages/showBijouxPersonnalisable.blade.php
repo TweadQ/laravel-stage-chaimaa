@@ -1,13 +1,16 @@
 <x-layouts.layout title="Bienvenue sur notre site">
 		<div class="px-20 py-20">
-				<h1 class="py-5 text-xl font-black">Titre : {{ $bijouxPersonnalisable->title }}</h1>
+				<h1 class="py-5 text-xl font-black">{{ $bijouxPersonnalisable->name }}</h1>
 				<img
-						alt="{{ $bijouxPersonnalisable->title }}"
+						alt="{{ $bijouxPersonnalisable->name }}"
 						class="w-96"
-						src="{{ $bijouxPersonnalisable->url_img }}"
+						src="{{ asset('storage/' . $bijouxPersonnalisable->url_img) }}"
 				>
 				<div class="pt-5">
 						<p>{!! nl2br(e($bijouxPersonnalisable->description)) !!}</p>
+				</div>
+				<div class="pt-5 font-bold">
+					<p>{{ $bijouxPersonnalisable->price }} €</p>
 				</div>
 				@auth
 						<div class="flex space-x-5 pt-8">

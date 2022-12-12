@@ -8,11 +8,11 @@
             <a href="" class="pb-3 text-[5rem] font-black uppercase text-teal-700">{{ $title }}</a>
     </div>
 </div> --}}
-<div class="pt-2 w-[19.5rem] h-[20.5rem] card bg-base-100 shadow-xl image-full
-    {{-- 2xl:w-[38.1rem] 2xl:h-[40.5rem] --}}
-    xl:w-[28rem] xl:h-[30rem]
-    lg:w-[18rem] lg:h-[20rem]
-    md:w-[13.5rem] md:h-[15.5rem]
+<div class="pt-2 px-5 w-[19.5rem] h-[20.5rem] card bg-base-100 shadow-xl image-full 
+  {{-- 2xl:w-[57.5rem] 2xl:h-[45rem] --}}
+  xl:w-[42.3rem] xl:h-[34.5rem]
+  lg:w-[27.3rem] lg:h-[28.5rem]
+  md:w-[20.5rem] md:h-[20.5rem]
 ">
     <figure><img src="{{ $url_img }}" alt="{{ $title }}" /></figure>
     <div class="card-body">

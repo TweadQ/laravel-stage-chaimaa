@@ -30,9 +30,9 @@ class BijouxPretController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createBijouxPret()
     {
-        return view('pages.create');
+        return view('pages.createBijouxPret');
     }
 
     /**
@@ -84,7 +84,7 @@ class BijouxPretController extends Controller
      */
     public function edit(BijouxPret $bijouxPret)
     {
-        return view('pages.edit', compact('bijouxPret'));
+        return view('pages.editBijouxPret', compact('bijouxPret'));
     }
 
     /**

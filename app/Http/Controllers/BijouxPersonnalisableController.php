@@ -30,9 +30,9 @@ class BijouxPersonnalisableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function createBijouxPersonnalisable()
     {
-        return view('pages.create');
+        return view('pages.createBijouxPersonnalisable');
     }
 
     /**
@@ -43,6 +43,7 @@ class BijouxPersonnalisableController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
                 // validation form
                 $request->validate([
                     'url_img' => 'required|max:2000|mimes:png,jpg|image',
@@ -86,7 +87,7 @@ class BijouxPersonnalisableController extends Controller
      */
     public function edit(BijouxPersonnalisable $bijouxPersonnalisable)
     {
-        return view('pages.edit', compact('bijouxPersonnalisable'));
+        return view('pages.editBijouxPersonnalisable', compact('bijouxPersonnalisable'));
     }
 
     /**
@@ -121,7 +122,7 @@ class BijouxPersonnalisableController extends Controller
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
-            'gravure' => $request->price,
+            'gravure' => $request->gravure,
             'updated_at' => now()
         ]);
 

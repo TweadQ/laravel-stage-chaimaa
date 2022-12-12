@@ -1,5 +1,7 @@
 @php
 $style = 'rounded-lg w-full block mb-3';
+$sizeToArray = explode("|", $vetement->size);
+// dd($sizeToArray);
 @endphp
 <x-layouts.layout title="Créer un nouveau produits">
 		<div class="px-20 py-20">
@@ -39,7 +41,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="XS"
 													type="checkbox"
 													value="XS"
@@ -49,7 +51,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="S"
 													type="checkbox"
 													value="S"
@@ -60,7 +62,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="M"
 													type="checkbox"
 													value="M"
@@ -71,7 +73,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="L"
 													type="checkbox"
 													value="L"
@@ -82,7 +84,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="XL"
 													type="checkbox"
 													value="XL"
@@ -93,7 +95,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="XXL"
 													type="checkbox"
 													value="XXL"

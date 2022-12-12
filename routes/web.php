@@ -18,7 +18,11 @@ Route::resource('bijouxPrets', BijouxPretController::class);
 Route::resource('bijouxPersonnalisables', BijouxPersonnalisableController::class);
 
 Route::get('create', [VetementController::class, 'create'])->name('create');
+Route::get('createBijouxPret', [BijouxPretController::class, 'createBijouxPret'])->name('createBijouxPret');
+Route::get('createBijouxPersonnalisable', [BijouxPersonnalisableController::class, 'createBijouxPersonnalisable'])->name('createBijouxPersonnalisable');
 Route::get('update', [VetementController::class, 'update'])->name('update');
+Route::get('updateBijouxPret', [BijouxPretController::class, 'updateBijouxPret'])->name('updateBijouxPret');
+Route::get('updateBijouxPersonnalisable', [BijouxPersonnalisableController::class, 'updateBijouxPersonnalisable'])->name('updateBijouxPersonnalisable');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -4,7 +4,7 @@
         <div class="flex justify-center items-center gap-20">
             @foreach ($bijouxPrets as $bijouxPret)
                 <a href="{{ route('bijouxPrets.show', $bijouxPret->id) }}">
-                    <x-cards.cardIndexClothes url_img="{{ $bijouxPret->url_img }}" title="{{ $bijouxPret->name }}" />
+                    <x-cards.cardClothes url_img="{{ $bijouxPret->url_img }}" title="{{ $bijouxPret->name }}" />
                 </a>
             @endforeach
         </div>

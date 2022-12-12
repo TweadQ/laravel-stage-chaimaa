@@ -30,15 +30,14 @@ $style = 'rounded-lg w-full block mb-3';
 										  rows="10"
 										>{{ old('description') }}</textarea>
 										<x-error-msg name="description" />
-
 								</div>
 								<div class="">
 									<fieldset>
-										<legend>Selectionne la/les tailles:</legend>
+										<legend>Selectionnez la/les tailles:</legend>
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="XS"
 													type="checkbox"
 													value="XS"
@@ -48,7 +47,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="S"
 													type="checkbox"
 													value="S"
@@ -59,7 +58,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="M"
 													type="checkbox"
 													value="M"
@@ -70,7 +69,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="L"
 													type="checkbox"
 													value="L"
@@ -81,7 +80,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="XL"
 													type="checkbox"
 													value="XL"
@@ -92,7 +91,7 @@ $style = 'rounded-lg w-full block mb-3';
 										<div>
 											<input
 													class=""
-													name="size"
+													name="size[]"
 													id="XXL"
 													type="checkbox"
 													value="XXL"
@@ -111,7 +110,6 @@ $style = 'rounded-lg w-full block mb-3';
 												value="{{ old('price') }}"
 										>
 										<x-error-msg name="price" />
-
 								</div>
 								<div class="">
 									<fieldset>
@@ -123,7 +121,6 @@ $style = 'rounded-lg w-full block mb-3';
 													id="homme"
 													type="radio"
 													value="homme"
-													checked
 											>
 											<label class="capitalize" for="homme">homme</label>
 										</div>
@@ -147,8 +144,8 @@ $style = 'rounded-lg w-full block mb-3';
 											>
 											<label class="capitalize" for="enfant">enfant</label>
 										</div>
-										<x-error-msg name="genre" />
 									</fieldset>
+									<x-error-msg name="genre" />
 								</div>
 								<div class="">
 										<input

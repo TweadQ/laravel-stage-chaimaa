@@ -22,19 +22,19 @@ class VetementController extends Controller
 
     public function Homme()
     {
-        $vetements = Vetement::all();
+        $vetements = Vetement::where('genre','homme')->paginate(20);
         return view('pages.homme', compact('vetements'));
     }
 
     public function Femme()
     {
-        $vetements = Vetement::all();
+        $vetements = Vetement::where('genre','femme')->paginate(20);
         return view('pages.femme', compact('vetements'));
     }
 
     public function Enfant()
     {
-        $vetements = Vetement::all();
+        $vetements = Vetement::where('genre','enfant')->paginate(20);
         return view('pages.enfant', compact('vetements'));
     }
 
@@ -64,18 +64,21 @@ class VetementController extends Controller
             'description' => 'required|max:1000',
             'price' => 'required',
             'genre' => 'required',
-            'size' => 'required'
+            // 'size' => 'required|array',
+            // 'size.*' => '',
         ]);
 
-        $validateImg = $request->file('url_img')->store('cover');
+        $sizeToString= implode(" | ", $request->size);
 
+        $validateImg = $request->file('url_img')->store('cover');
+        // dd($request->all());
         Vetement::create([
             'url_img' => $validateImg,
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
             'genre' => $request->genre,
-            'size' => $request->size,
+            'size' => $sizeToString,
             'created_at' => now()
         ]);
 

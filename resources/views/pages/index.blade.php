@@ -1,7 +1,6 @@
 <x-layouts.layout title="Bienvenue sur notre site">
-    <section class="py-[5rem]">
-        <h2 class="font-bold uppercase text-3xl mb-10 text-center">Vêtements</h2>
-        <div class="flex justify-center items-center gap-20">
+    <section class="pt-28 md:pt-24">
+        <div class="sm:flex sm:flex-col md:flex md:flex-row justify-center items-center gap-2">
             <a href="{{ route('homme') }}">
             <x-cards.cardIndexClothes 
                 url_img="https://archzine.fr/wp-content/uploads/2017/03/comment-porter-tee-shirt-blanc-chino-beige-vetements-basiques-idees.jpg" 
@@ -16,20 +15,25 @@
             </a>
             <a href="{{ route('enfant') }}">
             <x-cards.cardIndexClothes 
-                url_img="https://e2c6zvk8i3i.exactdn.com/wp-content/uploads/2019/06/top-marques-vetement-enfant.png" 
+                url_img="img/A063P01J2.webp" 
                 title="enfant" 
             />
             </a>
         </div>
     </section>
-    <section class="py-[5rem]">
-        <h2 class="font-bold uppercase text-3xl mb-10 text-center">Bijoux</h2>
-        <div class="flex justify-center items-center gap-20">
+    <section class="pt-2 pb-28 sm:pt-4 sm:pb-24">
+        <div class="sm:flex sm:flex-col md:flex md:flex-row justify-center items-center gap-2">
             <a href="{{ route('bijouxPret')}}">
-                <x-cards.cardIndexClothes url_img="img/alexis-antoine-GBpKfFfJhgw-unsplash.jpg" title="Prêt" />
+                <x-cards.cardIndexClothes2 
+                url_img="img/alexis-antoine-GBpKfFfJhgw-unsplash.jpg" 
+                title="Bijoux" 
+            />
             </a>
             <a href="{{ route('bijouxPersonnalisable')}}">
-                <x-cards.cardIndexClothes url_img="img/ruan-richard-rodrigues-moRYg6k5-Kg-unsplash.jpg" title="Personnalisable" />
+                    <x-cards.cardIndexClothes2 
+                    url_img="img/ruan-richard-rodrigues-moRYg6k5-Kg-unsplash.jpg" 
+                    title="Bijoux Personnalisables" 
+                />
             </a>
         </div>
     </section>
