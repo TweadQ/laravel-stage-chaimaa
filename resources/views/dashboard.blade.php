@@ -14,11 +14,16 @@
             </div>
         </div>
     </div>
-
     <div class="max-w-7xl mx-auto sm:px-8 lg:px-14">
         <a href="{{ route('home') }}"><p>Retour Accueil</p></a>
-        <a class="px-3" href="{{ route('create') }}"><p>Ajouter un nouveau vetement</p></a>
-        <a class="px-3" href="{{ route('createBijouxPret') }}"><p>Ajouter un nouveau bijoux</p></a>
-        <a class="px-3" href="{{ route('createBijouxPersonnalisable') }}"><p>Ajouter un nouveau bijoux personnalisable</p></a>
+        @auth
+            @if(Auth::user()->admin === 1)
+            <a class="px-3" href="{{ route('create') }}"><p>Ajouter un nouveau vetement</p></a>
+            <a class="px-3" href="{{ route('createBijouxPret') }}"><p>Ajouter un nouveau bijoux</p></a>
+            <a class="px-3" href="{{ route('createBijouxPersonnalisable') }}"><p>Ajouter un nouveau bijoux personnalisable</p></a>
+            @else
+            <p class="px-3">coucou</p>
+            @endif
+        @endauth
     </div>
 </x-app-layout>
