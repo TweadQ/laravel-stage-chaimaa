@@ -22,7 +22,11 @@
             <a class="px-3" href="{{ route('createBijouxPret') }}"><p>Ajouter un nouveau bijoux</p></a>
             <a class="px-3" href="{{ route('createBijouxPersonnalisable') }}"><p>Ajouter un nouveau bijoux personnalisable</p></a>
             @else
-            <p class="px-3">coucou</p>
+            <a class="px-3" href="{{ route('homme') }}"><p>Vêtement Homme</p></a>
+            <a class="px-3" href="{{ route('femme') }}"><p>Vêtement Femme</p></a>
+            <a class="px-3" href="{{ route('enfant') }}"><p>Vêtement Enfant</p></a>
+            <a class="px-3" href="{{ route('bijouxPret') }}"><p>Bijoux</p></a>
+            <a class="px-3" href="{{ route('bijouxPersonnalisable') }}"><p>Bijoux Personnalisable</p></a>
             @endif
         @endauth
     </div>

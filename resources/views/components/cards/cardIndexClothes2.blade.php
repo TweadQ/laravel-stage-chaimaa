@@ -8,7 +8,7 @@
             <a href="" class="pb-3 text-[5rem] font-black uppercase text-teal-700">{{ $title }}</a>
     </div>
 </div> --}}
-<div class="pt-2 px-5 w-[19.5rem] h-[20.5rem] card bg-base-100 shadow-xl image-full 
+<div class="pt-2 w-[19.5rem] h-[20.5rem] card image-full 
   {{-- 2xl:w-[57.5rem] 2xl:h-[45rem] --}}
   xl:w-[42.3rem] xl:h-[34.5rem]
   lg:w-[27.3rem] lg:h-[28.5rem]
