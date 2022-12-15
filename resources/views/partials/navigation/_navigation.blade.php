@@ -52,29 +52,32 @@
 							</button>
 						</a>
 						<ul class="p-2 bg-[#7AAEA5]">
-							<li><a href="{{ route('homme')}}">Vêtement Homme</a></li>
-							<li><a href="{{ route('femme')}}">Vêtement Femme</a></li>
-							<li><a href="{{ route('enfant')}}">Vêtement Enfant</a></li>
-							<li><a href="{{ route('bijouxPret')}}">Bijoux Prêt</a></li>
-							<li><a href="{{ route('bijouxPersonnalisable')}}">Bijoux Custom</a></li>
+							<p class="bg-gray-500 pl-2">Vêtements</p>
+							<li><a href="{{ route('homme')}}">Homme</a></li>
+							<li><a href="{{ route('femme')}}">Femme</a></li>
+							<li><a href="{{ route('enfant')}}">Enfant</a></li>
+							<p class="bg-gray-500 pl-2">Bijoux</p>
+							<li><a href="{{ route('bijouxPret')}}">Prêt</a></li>
+							<li><a href="{{ route('bijouxPersonnalisable')}}">Custom</a></li>
+							<p class="bg-gray-500 pl-2">Se Connecter</p>
+						@guest
+							<li><a href="{{ route('login') }}">Connexion</a></li>
+							<li><a href="{{ route('register') }}">Inscription</a></li>
+						@endguest
+						@auth
+							<li><a href="{{ route('dashboard') }}">Dashboard</a></li>
+							<li><a href="{{ route('logout') }}">
+								<form class="inline" method="POST" action="/logout">
+									@csrf
+									<button type="submit">
+										<i>Déconnexion</i>
+									</button>
+								</form>
+							</a></li>
+						@endauth
 						</ul>
 					  </li>	
 					</ul>
-					@guest
-								<a href="{{ route('login') }}" class="pr-4">Connexion</a>
-								<a href="{{ route('register') }}">Inscription</a>
-						@endguest
-						@auth
-								<a href="{{ route('dashboard') }}">Dashboard</a>
-								<a href="{{ route('logout') }}">
-									<form class="inline" method="POST" action="/logout">
-									  @csrf
-									  <button type="submit">
-										<i>Déconnexion</i>
-									  </button>
-									</form>
-								  </a>
-						@endauth
 				</div>
 		</div>
 </div>
