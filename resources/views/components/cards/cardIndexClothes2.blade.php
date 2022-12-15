@@ -1,6 +1,6 @@
 @props(['url_img', 'title'])
 <div class="pt-2 w-[19.5rem] h-[20.5rem] card image-full 
-  xl:w-[42.3rem] xl:h-[34.5rem]
+  xl:w-[39.3rem] xl:h-[34.5rem]
   lg:w-[27.3rem] lg:h-[28.5rem]
   md:w-[20.5rem] md:h-[20.5rem]
 ">
