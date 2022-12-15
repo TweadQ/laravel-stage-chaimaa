@@ -1,7 +1,7 @@
 <div class="bg-[#7AAEA5] text-gray-100">
 		<div class="flex justify-between items-center md:px-10 lg:px-20 py-1">
 				<div class="">
-					<a href="/"><img src="img/logo-rawan.png" alt="logo rawan" class="w-40"></a>
+					<a href="/"><img src="{{ asset ('img/logo-rawan.png') }}" alt="logo rawan" class="w-40"></a>
 				</div>
 				<div class="hidden md:block space-x-8 md:space-x-4">
 					<ul class="menu menu-horizontal p-0">

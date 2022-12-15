@@ -22,19 +22,19 @@ class VetementController extends Controller
 
     public function Homme()
     {
-        $vetements = Vetement::where('genre','homme')->paginate(20);
+        $vetements = Vetement::where('genre','homme')->paginate(8);
         return view('pages.homme', compact('vetements'));
     }
 
     public function Femme()
     {
-        $vetements = Vetement::where('genre','femme')->paginate(20);
+        $vetements = Vetement::where('genre','femme')->paginate(8);
         return view('pages.femme', compact('vetements'));
     }
 
     public function Enfant()
     {
-        $vetements = Vetement::where('genre','enfant')->paginate(20);
+        $vetements = Vetement::where('genre','enfant')->paginate(8);
         return view('pages.enfant', compact('vetements'));
     }
 

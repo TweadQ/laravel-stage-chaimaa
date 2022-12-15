@@ -21,7 +21,7 @@ class BijouxPersonnalisableController extends Controller
 
     public function bijouxPersonnalisable()
     {
-        $bijouxPersonnalisables = BijouxPersonnalisable::all();
+        $bijouxPersonnalisables = BijouxPersonnalisable::paginate(8);
         return view('pages.bijouxPersonnalisable', compact('bijouxPersonnalisables'));
     }
 

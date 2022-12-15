@@ -21,7 +21,7 @@ class BijouxPretController extends Controller
 
     public function bijouxPret()
     {
-        $bijouxPrets = BijouxPret::all();
+        $bijouxPrets = BijouxPret::paginate(8);
         return view('pages.bijouxPret', compact('bijouxPrets'));
     }
 

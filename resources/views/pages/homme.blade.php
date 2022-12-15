@@ -8,5 +8,8 @@
                 </a>
             @endforeach
         </div>
+        <div class="py-10 px-10 flex justify-center">
+            {{ $vetements->links('pagination::tailwind') }}
+        </div>
     </section>
 </x-layouts.layout>
