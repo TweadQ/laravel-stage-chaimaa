@@ -1,6 +1,6 @@
 <x-layouts.layout title="Bienvenue sur notre site">
     <section class="pt-28 md:pt-24">
-        <div class="sm:flex sm:flex-col md:flex md:flex-row justify-center items-center gap-2">
+        <div class="flex flex-col md:flex md:flex-row justify-center items-center gap-2">
             <a href="{{ route('homme') }}">
             <x-cards.cardIndexClothes 
                 url_img="https://archzine.fr/wp-content/uploads/2017/03/comment-porter-tee-shirt-blanc-chino-beige-vetements-basiques-idees.jpg" 
@@ -22,7 +22,7 @@
         </div>
     </section>
     <section class="pt-2 pb-28 sm:pt-4 sm:pb-24">
-        <div class="sm:flex sm:flex-col md:flex md:flex-row justify-center items-center gap-2">
+        <div class="flex flex-col md:flex md:flex-row justify-center items-center gap-2">
             <a href="{{ route('bijouxPret')}}">
                 <x-cards.cardIndexClothes2 
                 url_img="img/alexis-antoine-GBpKfFfJhgw-unsplash.jpg" 

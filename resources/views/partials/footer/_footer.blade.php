@@ -1,4 +1,4 @@
-<footer class="text-center bg-green-300 text-gray-100 py-10">
+<footer class="text-center bg-[#7AAEA5] text-gray-100 py-10">
   <div>
     <span class="footer-title">Réseaux sociaux :</span> 
     <a class="link link-hover">Twiiter</a>
